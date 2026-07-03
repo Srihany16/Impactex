@@ -2,7 +2,7 @@
 
 A modern, full-stack web application that connects donors with verified charitable projects through a transparent, data-driven marketplace.
 
-## 🌟 Features
+##  Features
 
 - **Interactive Hero Section** with smooth scrolling animations
 - **Portfolio Dashboard** with real-time impact tracking
@@ -13,7 +13,7 @@ A modern, full-stack web application that connects donors with verified charitab
 - **Backend API** built with FastAPI
 - **Database Integration** with PostgreSQL
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 velocity-hackathon-main/
@@ -49,7 +49,7 @@ velocity-hackathon-main/
 └── start-all.bat           # Start both servers
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -115,7 +115,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 - **Backend API:** http://localhost:8000
 - **API Docs:** http://localhost:8000/docs
 
-## 🎨 Technology Stack
+##  Technology Stack
 
 ### Frontend
 - **React 19** with TypeScript
@@ -133,7 +133,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 - **Bcrypt** - Password hashing
 - **Uvicorn** - ASGI server
 
-## 🔐 Authentication
+##  Authentication
 
 The app supports:
 - User registration (signup)
@@ -141,7 +141,7 @@ The app supports:
 - Protected routes
 - Test login with "Team Pentagon" account
 
-## 📊 Features Breakdown
+## Features Breakdown
 
 ### 1. Hero Section
 - Smooth parallax scrolling
@@ -167,7 +167,7 @@ The app supports:
 - Security settings
 - System information
 
-## 🛠️ Development
+##  Development
 
 ### Adding New Components
 1. Create component in `components/` directory
@@ -204,7 +204,7 @@ Backend is configured to accept requests from:
 - `http://localhost:3000`
 - `http://127.0.0.1:3000`
 
-## 📝 API Endpoints
+##  API Endpoints
 
 ### Authentication
 - `POST /auth/signup` - Create new user
@@ -213,7 +213,7 @@ Backend is configured to accept requests from:
 ### Protected Routes
 - `GET /protected` - Test protected route (requires auth)
 
-## 🎯 Future Enhancements
+##  Future Enhancements
 
 - Payment integration
 - Real-time notifications
@@ -222,14 +222,4 @@ Backend is configured to accept requests from:
 - Blockchain verification
 - Multi-language support
 
-## 📄 License
 
-This project is part of a hackathon submission.
-
-## 👥 Team
-
-**Team Pentagon**
-
----
-
-**Built with ❤️ for the Velocity Hackathon**
