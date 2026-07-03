@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+.font-serif {
+    font-family: 'Fraunces', serif;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+/* Exact gradient from the Claude template provided */
+.hero-gradient {
+    background: linear-gradient(135deg, 
+        #f4d89f 0%, 
+        #f0c28e 15%, 
+        #ebb77d 30%, 
+        #e8a86c 45%, 
+        #ea9771 60%, 
+        #ed8782 75%, 
+        #f37b8f 85%, 
+        #f97099 100%);
+}
+
+.sticky-hero {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to bottom, #e8a86c 0%, #d49055 15%, #c07840 30%, #8a5230 50%, #3a3a3a 70%, #000000 100%);
+    /* Shadow to indicate the overlay */
+    box-shadow: 0 -30px 60px rgba(0,0,0,0.12);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-in-from-bottom-8 {
+    from { 
+        opacity: 0; 
+        transform: translateY(2rem);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-from-bottom-10 {
+    from { 
+        opacity: 0; 
+        transform: translateY(2.5rem);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-from-top-4 {
+    from { 
+        opacity: 0; 
+        transform: translateY(-1rem);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in {
+    from { 
+        opacity: 0; 
+        transform: scale(0.95);
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+}
+
+.animate-in {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.fade-in {
+    animation-name: fade-in;
+}
+
+.slide-in-from-bottom-8 {
+    animation-name: slide-in-from-bottom-8;
+}
+
+.slide-in-from-bottom-10 {
+    animation-name: slide-in-from-bottom-10;
+}
+
+.slide-in-from-top-4 {
+    animation-name: slide-in-from-top-4;
+}
+
+.zoom-in {
+    animation-name: zoom-in;
+}
+
+.duration-300 {
+    animation-duration: 0.3s;
+}
+
+.duration-500 {
+    animation-duration: 0.5s;
+}
+
+.duration-700 {
+    animation-duration: 0.7s;
+}

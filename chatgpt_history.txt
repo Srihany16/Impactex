@@ -1,0 +1,122 @@
+ImpactEx Project Log
+
+1. Project Vision
+
+ImpactEx is a hackathon project that reimagines charity donations using
+a market-inspired model to make philanthropy more engaging for Gen Z.
+Instead of static donations, charities have dynamic “minimum donation
+prices” influenced by demand, participation, and risk.
+
+Core goals: - Encourage recurring donations - Increase engagement with
+charities - Make impact transparent and interactive - Gamify giving
+without treating charities as profit-generating assets
+
+------------------------------------------------------------------------
+
+2. System Architecture
+
+Frontend - React-based UI (provided by teammate) - Calls backend REST
+APIs - Stores JWT after login
+
+Backend - FastAPI - JWT Authentication - PostgreSQL - SQLAlchemy (Auth
+database) - psycopg2 (Impact database)
+
+Databases 1. auth_db - Users - Password hashes - JWT authentication
+
+2.  impactex_db
+    -   Charities
+    -   Donations
+    -   User impact score
+    -   Dynamic pricing
+
+------------------------------------------------------------------------
+
+3. SQL Design
+
+Main tables: - charities - donations - user_profiles - impact_history
+
+Charity fields include: - current_price - base_price - current_risk -
+volatility - total_donations - decay_rate - time_step
+
+Donation fields: - user_id - charity_id - amount - price_at_donation -
+risk_at_donation
+
+------------------------------------------------------------------------
+
+4. Backend Logic
+
+Authentication - Signup - Login - Password hashing (bcrypt/passlib) -
+JWT generation - JWT verification
+
+Protected endpoints use JWT to identify users.
+
+Main APIs: - GET /charities - POST /donate - GET /users/{id}/impact
+
+------------------------------------------------------------------------
+
+5. Dynamic Charity Pricing
+
+Each charity has: - Base donation price - Current price - Risk factor -
+Donation count
+
+Concept: - Higher demand can increase minimum donation. - Risk and
+activity influence pricing over time. - Every donation updates the
+charity state.
+
+------------------------------------------------------------------------
+
+6. User Impact
+
+Each user has: - Total donated - Impact score - Donation history
+
+Purpose: - Track long-term contribution - Encourage repeat engagement -
+Build transparent impact records
+
+------------------------------------------------------------------------
+
+7. Security
+
+-   JWT authentication
+-   Password hashing
+-   Separate authentication database
+-   Authorization via Bearer token
+
+------------------------------------------------------------------------
+
+8. Development Journey
+
+Major milestones: - Designed SQL schema - Built FastAPI backend -
+Connected PostgreSQL - Created authentication service - Added JWT
+verification - Connected donation APIs - Debugged Python package
+imports - Fixed environment configuration - Integrated frontend with
+backend
+
+Common issues solved: - Module imports - Virtual environment
+activation - JWT package installation - DATABASE_URL configuration -
+SQLAlchemy setup - Package structure (init.py)
+
+------------------------------------------------------------------------
+
+9. Hackathon Result
+
+Project: ImpactEx
+
+Result: 4th place among approximately 100–120 software and hardware
+teams.
+
+Team: - Arun Muhil - Hasini Sai Durgempudi - Snigdha Parsa - Yashaswini
+Sudarshan - Srihan Yadalla
+
+------------------------------------------------------------------------
+
+10. Key Learning
+
+This project involved: - REST API design - Authentication - PostgreSQL
+schema design - SQLAlchemy ORM - FastAPI - JWT - Backend architecture -
+Database integration - System design - Debugging large software systems
+
+Future improvements: - Live pricing scheduler - Analytics dashboard -
+Charity verification - Leaderboards - Recommendation engine - Cloud
+deployment - Payment gateway integration
+
+End of project log.
